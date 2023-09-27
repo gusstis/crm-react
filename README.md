@@ -33,3 +33,12 @@ Al utilizar este enfoque de enrutamiento, el contenido de la página se actualiz
 Además, React Router DOM también ofrece un componente llamado Outlet que permite que los componentes de React se muestren en función de la ruta actual. El Outlet actúa como un punto de entrada en la jerarquía de componentes donde se renderizan los componentes correspondientes a la ruta actual. Al cambiar de ruta, React Router DOM utiliza la información de la ruta para renderizar el componente correspondiente en el Outlet sin tener que cargar una página nueva.
 
 
+Loader:
+ La función loader en React no es una función reservada específica de React. El término "loader" generalmente se refiere a una función que se utiliza para cargar datos o recursos de forma asíncrona.
+
+En el contexto de useLoaderData, esta función de carga puede llamarse de cualquier manera y no tiene que llamarse específicamente loader. Lo que importa es que esta función devuelva una promesa que se resuelve con los datos que se deben utilizar en la página.
+
+La función useLoaderData es parte de la biblioteca react-server y se utiliza para cargar datos en el servidor antes de que se renderice la página en el navegador. Esta función utiliza el objeto Loader para acceder a la función loader que se utiliza para cargar los datos necesarios. El objeto Loader se pasa al componente <ServerDataContext.Provider> en el servidor y se puede acceder a través del hook useLoaderData en el componente de la página.
+
+En resumen, la función loader no es una función reservada de React, puede tener cualquier nombre y se utiliza para cargar datos de forma asíncrona. useLoaderData es una función que se utiliza en el servidor para cargar datos antes de que se renderice la página en el navegador y utiliza el objeto Loader para acceder a la función de carga de datos.
+
