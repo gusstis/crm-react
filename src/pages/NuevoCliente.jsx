@@ -2,8 +2,11 @@ import {useNavigate, Form} from 'react-router-dom';
 import Formulario from '../components/Formulario';
 
 //Con esto react-router-dom se encarga del envío de formularios
-export function action ( ) {
-  console.log('Submit al formu');
+export async function action ({request}) {
+  const formData = await request.formData()
+  const datos = Object.fromEntries(formData)
+  console.log(datos)
+  return datos
 }
 
 function NuevoCliente() {
