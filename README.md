@@ -42,3 +42,15 @@ La función useLoaderData es parte de la biblioteca react-server y se utiliza pa
 
 En resumen, la función loader no es una función reservada de React, puede tener cualquier nombre y se utiliza para cargar datos de forma asíncrona. useLoaderData es una función que se utiliza en el servidor para cargar datos antes de que se renderice la página en el navegador y utiliza el objeto Loader para acceder a la función de carga de datos.
 
+Los loaders y actions están por fuera de React, por lo tanto no pueden tener Hooks o State. Entonces React Router DOM lo que hace es manejar los datos por fuera para evitar los re-renders de React o cargar la información con un useEffect
+
+En cuanto a los valores de un select si deberia ser con useActionData
+
+useActionData = Datos de formularios (para obtener el resultado de un action)
+
+useLoaderData = Datos de API's (para obtener los datos de un loader)
+
+en cuanto a hacer un custom Hook para los datos de useActionData sería como crear un hook para un hook, en este caso lo ideal sería manejar todo con lo que ofrece React Router DOM.
+
+
+
