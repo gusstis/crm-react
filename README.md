@@ -66,3 +66,9 @@ Los límites de errores funcionan como un bloque catch{} de JavaScript, pero par
 
 Ten en cuenta que los límites de errores sólo capturan errores en los componentes bajo ellos en el árbol. Un límite de errores no puede capturar un error dentro de sí mismo. Si un límite de errores falla tratando de renderizar el mensaje de error, el error se propagará al límite de errores más cercano por encima de él. Esto también es similar al funcionamiento de los bloques catch{} en JavaScript.
 
+
+# navigate(): para redireccionar por medio de un botón
+# <Link/> : para crear una barra de navegación
+# redirect(): para redireccionar al usuario en 'actions' y 'loaders'
+
+

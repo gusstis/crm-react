@@ -1,6 +1,7 @@
-import {useNavigate, Form, useActionData} from 'react-router-dom';
+import {useNavigate, Form, useActionData, redirect} from 'react-router-dom';
 import Formulario from '../components/Formulario';
 import Error from '../components/Error';
+import { agregarCliente } from '../data/clientes';
 
 //Con esto react-router-dom se encarga del envío de formularios
 export async function action ({request}) {
@@ -27,8 +28,9 @@ if(Object.keys(errores).length) {
   return errores
 }
 
+await agregarCliente(datos)
+return redirect('/')
 
-  //return null
 }
 
 function NuevoCliente() {
