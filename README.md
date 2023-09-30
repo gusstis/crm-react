@@ -52,5 +52,17 @@ useLoaderData = Datos de API's (para obtener los datos de un loader)
 
 en cuanto a hacer un custom Hook para los datos de useActionData sería como crear un hook para un hook, en este caso lo ideal sería manejar todo con lo que ofrece React Router DOM.
 
+Error boundaries en ReactJS
+EN español, "Límites de errores", son componentes de react que capturan errores de JavaScript en cualquier parte de su árbol de componentes hijo, registran esos errores y muestran una interfaz de usuario de reserva en lugar del árbol de componentes bloqueado.
 
+Los límites de errores no capturan errores de:
+
+    Manejadores de eventos 
+    Código asíncrono (p.ej. callbacks de setTimeout o requestAnimationFrame)
+    Renderizado en el servidor
+    Errores lanzados en el propio límite de errores (en lugar de en sus hijos)
+
+Los límites de errores funcionan como un bloque catch{} de JavaScript, pero para componentes. Sólo los componentes de clase (class components) pueden ser límites de errores. En la práctica, la mayor parte del tiempo declararás un límite de errores una vez y lo usarás a lo largo de tu aplicación.
+
+Ten en cuenta que los límites de errores sólo capturan errores en los componentes bajo ellos en el árbol. Un límite de errores no puede capturar un error dentro de sí mismo. Si un límite de errores falla tratando de renderizar el mensaje de error, el error se propagará al límite de errores más cercano por encima de él. Esto también es similar al funcionamiento de los bloques catch{} en JavaScript.
 
