@@ -1,11 +1,12 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
+import React from 'react';
+import ReactDOM from 'react-dom/client';
 //import App from './App.jsx'
-import './index.css'
-import {createBrowserRouter, RouterProvider} from 'react-router-dom'
-import Layout from './components/Layout'
-import NuevoCliente, {action as nuevoClienteAction} from './pages/NuevoCliente'
-import Index, {loader as clientesLoader} from './pages/Index'
+import './index.css';
+import {createBrowserRouter, RouterProvider} from 'react-router-dom';
+import Layout from './components/Layout';
+import NuevoCliente, {action as nuevoClienteAction} from './pages/NuevoCliente';
+import Index, {loader as clientesLoader} from './pages/Index';
+import EditarCliente, {loader as editarClienteLoader} from './pages/EditarCliente';
 import ErrorPage from './components/ErrorPage';
 
 const router = createBrowserRouter([
@@ -23,6 +24,11 @@ const router = createBrowserRouter([
         path: '/clientes/nuevo',
         element: <NuevoCliente/>,
         action: nuevoClienteAction
+      },
+      {
+        path: '/clientes/:clienteId/editar',
+        element: <EditarCliente/>,
+        loader: editarClienteLoader,
       }
     ]
   },

@@ -17,7 +17,7 @@ export async function agregarCliente (datos) {
             }
         } )
         await respuesta.json()
-        return true;
+        //return true;
     } catch (error) {
         console.log(error)
     }
